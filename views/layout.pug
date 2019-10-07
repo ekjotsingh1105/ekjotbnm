@@ -1,0 +1,97 @@
+doctype html
+html
+  head
+    block headContent
+    title Ekjot Singh 
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css', integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ', crossorigin='anonymous')
+		
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+	      
+    link(rel='stylesheet', href='stylesheets/style.css')
+  body#bg-img
+ 
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href='/') Ekjot Singh 
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='/')
+              | Home
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='/#') About Me 
+          li.nav-item
+            a.nav-link(href='/#') Contact Me
+          li.nav-item
+            a.nav-link(href='/#') Work 
+			
+			
+      
+    main#home
+
+      h1.lg-heading
+        | Ekjot 
+        span.text-secondary Singh
+      h2.sm-heading
+        | Web Developer, Programmer & Designer
+      .icons
+        a(href='#!')
+          i.fab.fa-twitter.fa-2x
+        a(href='#!')
+          i.fab.fa-facebook.fa-2x
+        a(href='#!')
+          i.fab.fa-linkedin.fa-2x
+        a(href='#!')
+          i.fab.fa-github.fa-2x
+
+ 
+
+      h1.lg-heading
+        | About 
+        span.text-secondary Me
+             .container
+               .row
+  
+        
+             p
+        .projects.div.btn-dark.col-12s.
+            |I am  a web designer from Canada
+
+            |I spend my days with my hands in many different areas of web development from back end programming (PHP,SQL Database,Wordpress, ASP.NET on Rails) to front end engineering (HTML, CSS, and jQuery/Javascript), digital accessibility, user experience and visual design.
+
+    h1.sm-heading.col-4
+    |My Webshop 
+   
+    p
+    .projects.div.btn-dark.col-12.
+            I’m extremely passionate about web development and design in all it’s forms and helping small businesses and artisans build and improve their online presence.
+             Aside from web development, I enjoy spending my time with my wife, sons, and daughter, brewing beer, taking photos and playing & watching sports (hockey, golf, and mixed martial arts to name a few).
+        
+      	
+        .container
+    h1 Contact ME
+    if success
+      .alert.alert-success(role="alert") Your message has been sent!
+    if failure
+      .alert.alert-danger(role="alert")= failure
+
+    form(method="post")
+      .form-group
+        label Name
+        input.form-control(type="text", name="name", placeholder="Your name")
+      .form-group
+        label Email
+        input.form-control(type="email", name="email", placeholder="example@domain.com")
+      .form-group
+        label Message
+        textarea.form-control(name="message", rows="4")
+      button.btn.btn-primary(type="submit") Submit
+
+
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k', crossorigin='anonymous')
+ 
+    block content
